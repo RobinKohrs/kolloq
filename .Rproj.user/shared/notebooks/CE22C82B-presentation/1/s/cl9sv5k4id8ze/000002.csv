@@ -1,0 +1,15 @@
+"0","myBib <- ReadBib(""./ref.bib"", check = FALSE)
+"
+"2","Loading required namespace: bibtex
+"
+"2","Failed with error:  "
+"2",""
+"2","â€˜there is no package called â€˜bibtexâ€™â€™"
+"2",""
+"2","
+"
+"2","Sorry this feature currently cannot be used without the “bibtex” package installed.
+Please install from GitHub using the “remotes” (or “devtools”) package:
+
+remotes::install_github(""ROpenSci/bibtex"")
+"

@@ -1,0 +1,518 @@
+---
+title: "Internship - Robin Kohrs"
+subtitle: "Rainfall Thresholds"
+author: "Robin Kohrs"
+institute: "Eurac Research"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default
+      - css/style.css
+    lib_dir: libs
+    includes:
+      after_body: insert-logo.html
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+---
+
+class: title-slide, middle
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = TRUE)
+myBib <- ReadBib("./ref.bib", check = FALSE)
+```
+
+## .center[Robin Kohrs]
+
+# .center[Rainfall Thresholds for South Tyrol]
+
+--
+
+.center[
+  #### (and their challenges)
+]
+
+*** 
+.center[
+
+Supervisor:
+
+  Dr. Stefan Steger (Eurac)
+  
+  Dr. Jason Goetz (University of Jena)
+]
+
+---
+
+
+# Overview
+
+1. Some things about me
+
+2. The objective of my internship
+
+3. What is a rainfall threshold?
+
+4. The dream data
+
+5. The real data
+
+6. The thesholds
+
+7. Conclusion
+
+---
+
+# Quick introduction
+
+-  My name is Robin Kohrs
+
+--
+
+- I am from Hamburg, where I also mainly did my masters.
+
+--
+
+- At some point I changed my masters from geography in Innsbruck to to geoinformatics in Jena
+
+--
+
+- I really like (spatial) statistics, remote sensing, data-handling, and data visualization (although I'm no good in any of them)
+ 
+---
+
+# The internship
+
+- Started in December 2020 and was prolonged in April 2021 (when I also officially started the master thesis)
+
+<br>
+- Embedded in the Proslide project
+
+<br>
+- Develop rainfall thresholds for the Province of South Tyrol 
+
+<br>
+- Do a final presentation
+
+---
+
+# What is a rainfall threshold?
+
+---
+
+# What is a .white[rainfall] threshold?
+
+--
+
+
+.center[
+```{r, out.width="60%", eval=TRUE, echo=F}
+knitr::include_graphics("bamboothreshold.PNG")
+```
+
+[Link](https://www.ambientbp.com/product-info/bamboo-thresholds)
+
+]
+
+--
+
+.center.cite[
+A threshold is: "the level or point at which you start to experience something, or at which something starts to happen:"
+]
+
+
+
+[.center[Cambridge Dictionary]](https://dictionary.cambridge.org/dictionary/english/threshold)
+---
+
+# What is a .white[rainfall] threshold?
+
+.center[
+```{r, out.width="60%", eval=TRUE, echo=F}
+knitr::include_graphics("bamboothreshold.PNG")
+```
+
+[Link](https://www.ambientbp.com/product-info/bamboo-thresholds)
+
+]
+
+
+.center.cite[
+A threshold is: "the level or point at which you start to experience something, or at which **something starts to happen:**"
+]
+
+
+[.center[Cambridge Dictionary]](https://dictionary.cambridge.org/dictionary/english/threshold)
+
+---
+
+# What is a rainfall threshold?
+
+.cite[A threshold is the minimum or maximum level of some quantity needed for a process to take place or a state to change (White et al, 1996). A minimum threshold defines the lowest level below which a process does not occur. A maximum threshold represents the level above which a process always occurs. For rainfall-induced landslides a threshold may define the rainfall, soil moisture, or hydrological conditions that, when reached or exceeded, are likely to trigger landslides.]
+
+`r Citep(myBib, "Guzzetti_2007")`
+
+---
+
+# What is a rainfall threshold?
+
+.cite[A threshold is the minimum or maximum level of **some quantity** needed for a process to take place or a state to change (White et al, 1996). A **minimum threshold** defines the lowest level below which a process does not occur. A **maximum threshold** represents the level above which a process always occurs. For **rainfall-induced landslides** a threshold may define the rainfall, soil moisture, or hydrological conditions that, when reached or exceeded, are **likely to trigger** landslides.]
+
+`r Citep(myBib, "Guzzetti_2007")`
+
+---
+
+# Anatomy of a threshold:
+
+### Data
+  + Rainfall/Soil moisture/... data
+  + Landslide data
+
+### Some quantity to reach/exceed:
+ + Event-Intenstiy (I), -Duration (D), -Cumulated rainfall (E) 
+ + 3-day cumualted rainfall before slide (p3)
+ + 15-day cumualted rainfall before slide (p15)
+
+### A threshold-model to represent reality:
+  - A value (1D threshold) 
+  - A line (2D threshold) 
+  - A probability value (something else)
+
+---
+
+# Data
+
+### Gridded rainfall data
+
+- 250 m spatial resolution / 1 day temporal resolution
+- Available for the regions of South Tyrol and Trento as NetCDFs
+- Anomaly-based approach / Kriging?
+- `r Citet(myBib, "Crespi_2021")`
+
+--
+
+### Landslide Data
+
+- Inventario dei fenomeni franosi in Italia (IFFI) Database
+- Gravitational movemets of all types (no avalanches)
+- Many variables (including the date, material, extent, ...)
+- I received a manual extraction of the database:
+  * Ms Access Database
+  * Excel FIles
+  * Shapefiles
+
+---
+
+```{r, out.width="100%", out.height="100%", echo=F}
+knitr::include_graphics("mean_monthly_precip.png")
+```
+
+---
+
+```{r map, echo=F, warning=F, message=F, out.width="100%", out.height="100%"}
+library(mapview)
+library(iffitoR)
+library(tidyverse)
+`Selected Landslides`=filt_landslide %>% select(PIFF_ID, first_level, second_level, date, material)
+
+mapview(`Selected Landslides`,col.regions="steelblue")
+```
+
+
+
+---
+
+# More Data
+
+### Station rainfall data
+
+- WISKI Project
+- 66 Stations in South Tyrol
+- 65 record precipitation in 5 minute, 1 in 10 minute Intervals
+- Vairable length of recording
+
+
+### Soil moisture data
+
+- Soilmoisture Content data
+- Based on Sentinel-1 and Sentinel-2
+- Statistically derived product with field measurements
+- `r Citet(myBib, "Attarzadeh_2018")`
+
+
+---
+
+background-image: url(stations.png)
+background-size: 95%
+
+---
+
+background-image: url(sm_antrainfall.png)
+background-size: 95%
+
+---
+# Some quantity to exceed
+
+.pull-left[
+## <u>Event-based quantities</u>
+
+- I => Intensity of a rainfall event [ mm / unit time]
+
+- E => Total depth of a rainfall event [ mm ]
+
+- D => Duration of a rainfall event [ time ]
+
+- Peak intensity, ...
+
+]
+
+.pull-right[
+## <u>Period based thresholds</u>
+
+- p3 => precipitation 3 days prior to landslide
+
+- p15 => precipitaiton 15 days prior to slide
+
+- Often times try to include some decay function or any other proxy for the water saturation of the soil
+]
+
+
+---
+
+# Some quantity to exceed
+
+.pull-left[
+## <u>Event-based quantities</u>
+
+- I => Intensity of a rainfall event [ mm / unit time]
+
+- **E => Total depth of a rainfall event [ mm ]**
+
+- **D => Duration of a rainfall event [ time ]**
+
+- Peak intensity, ...
+
+
+### .blue[*ED Threshold*]
+
+]
+
+.pull-right[
+## <u>Period based thresholds</u>
+
+- **p3 => precipitation 3 days prior to landslide**
+
+- **p15 => precipitaiton 15 days prior to slide**
+
+- Often times try to include some decay function or any other proxy for the water saturation of the soil
+
+
+### .blue[*3-15 day antecedent threshold*]
+]
+
+---
+
+# More quantities to possibly exceed
+.ho[
+```{r vars, out.width="100%", echo=F}
+knitr::include_graphics("vars.PNG")
+```
+]
+<h2 style='margin-top: 0;'> . . . </h2>
+
+`r Citep(myBib, "Guzzetti_2007a")`
+
+---
+# Methods for thresholding
+
+## Quantile regression
+  - For *deterministic* threshold
+  - More in just a second
+
+<br>
+***
+
+## Binary classifiers
+   - **Logistic regression**
+      + Linear 
+      + Interpretable (yet not OLS)
+      
+   - **Generalized Additive Model (GAM)**
+      + Semi-parametric extension of GLMs
+      + Can capture non-linearities by using e.g. splines 
+      + Due to additive structure, still some interpretation possible
+
+---
+
+# Primer on Quantile Regression
+
+<br> 
+
+- Introduced by `r Citet(myBib, "Koenker_1978")`
+
+- Implemented in R in the `quantreg` package `r Citep(myBib, "Koenker_2020")`
+
+- Fits conditional quantiles, rather than the conditional mean (OLS)
+
+- Minimizes the sum of asymmetrically weighted residuals
+
+- More robust against outliers than OLS
+
+- Can handle skewed error distributions better than OLS
+
+- Standard errors are somwehat less straightforward to calculate
+
+---
+
+background-image: url(compare_ols_qr.png)
+background-size: contain
+
+---
+
+# Software used
+
+### - R
+
+  + ####and many of its extensions
+
+### - (QGis)
+
+### - [Coolers.co](https://coolors.co/), [Stackoverflow](https://stackoverflow.com/), ...
+
+
+---
+
+# Why R? .small[(and not python)]
+
+```{r ex, echo=F, excercise=T}
+knitr::include_app("https://robinkohrs.shinyapps.io/untitled/")
+```
+
+
+
+---
+
+# Evolution of a rainfall threshold
+
+--
+
+##1. What do we see on the two axes
+
+--
+
+##2. How do we fit the line
+
+--
+
+##3. Is it possible to do this easier?
+
+--
+
+##4. Where are the problems?
+
+--
+
+##5. There are even more problems?
+
+---
+
+background-image: url(explain1.png)
+background-size: 95%
+
+---
+
+background-image: url(explain2.png)
+background-size: 95%
+
+---
+
+background-image: url(explain3.png)
+background-size: 95%
+
+# What is normally done
+
+---
+
+background-image: url(explain4.png)
+background-size: 95%
+
+# What is normally done
+---
+
+background-image: url(explain5.png)
+background-size: 95%
+
+---
+
+background-image: url(explain6.png)
+background-size: 95%
+
+# What is normally done
+
+---
+
+```{r, message=F, warning=F, excercise=T, eval=F}
+library(rainfallR)
+library(iffitoR)
+library(dplyr)
+
+landsld %>% filter(year.int == 2016) %>% filter(date_info == "day") %>% slice(1:5) -> data
+
+rain_data = rainfallR::get_rainfall_point_data(
+  data,
+  days_back = 5,
+  daily_thresh = 1.1,
+  n_dry = 2,
+  ncores = 2,
+  save = F,
+  path_rainfall = "data/"
+)
+
+base::subset(rain_data, select = c("PIFF_ID", "precip", "days_before_event", "event")) %>% head(n=10)
+```
+
+---
+background-image: url(know1.svg)
+background-size: contain
+
+---
+background-image: url(know2.svg)
+background-size: contain
+
+---
+
+background-image: url(know3.svg)
+background-size: contain
+
+# Status Quo
+---
+background-image: url(know31.svg)
+background-size: contain
+
+# The goal
+---
+background-image: url(know4.svg)
+background-size: contain
+
+---
+
+# Take away
+
+- With hindsight many things I would have done differently
+
+---
+# References
+
+```{r, results='asis', echo=F, warning=F, message=F}
+PrintBibliography(myBib)
+```
+
