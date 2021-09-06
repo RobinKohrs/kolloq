@@ -456,8 +456,26 @@ background-size: 95%
 background-image: url(explain6.png)
 background-size: 95%
 
-# What is normally done
+---
 
+background-image: url(explain61.png)
+background-size: 95%
+
+---
+background-image: url(funny.jpg)
+background-size: 300px 500px
+background-position: 70% 35%
+
+.pull-left[
+# What
+# is
+# the
+# problem?
+
+]
+
+---
+# The real problem...
 ---
 
 ```{r, message=F, warning=F, excercise=T, eval=F}
