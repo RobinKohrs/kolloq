@@ -1,0 +1,24 @@
+<script>
+
+function rotate(element, speed=5){
+  function update(time){
+    element.style.transform  = `rotateZ(${time/10}deg`;
+    requestAnimationFrame(update);
+  }
+  update(10)
+}
+
+const square = document.getElementById("spinner");
+console.log(square)
+
+document.querySelectorAll("#spinner").forEach(el => {
+  rotate(square)
+});
+
+
+time = document.querySelector("#Time");
+time.innerHtml("this");
+
+</script>
+
+

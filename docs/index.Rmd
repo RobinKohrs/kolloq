@@ -11,7 +11,8 @@ output:
       - css/style.css
     lib_dir: libs
     includes:
-      after_body: insert-logo.html
+      after_body: 
+        ["insert-logo.html", "anim.html"]
     nature:
       highlightStyle: github
       highlightLines: true
@@ -19,6 +20,12 @@ output:
     seal: false
 ---
 
+<div id="Time"><div>
+
+<div id="spinner"></div>
+
+
+---
 class: title-slide, middle
 
 ```{r, load_refs, include=FALSE, cache=FALSE}

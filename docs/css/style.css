@@ -115,3 +115,12 @@ pre{
   font-weight: bold;
   color: firebrick;
 }
+
+#spinner {
+	background: black;
+	position: fixed;
+	top: 35%;
+	left: 35%;
+	width: 10vw;
+	height: 10vw;
+}
