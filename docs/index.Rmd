@@ -20,7 +20,6 @@ output:
     seal: false
 ---
 
-<div id="Time"><div>
 
 <div id="spinner"></div>
 
@@ -360,31 +359,6 @@ knitr::include_graphics("vars.PNG")
 
 ---
 
-# Primer on Quantile Regression
-
-<br> 
-
-- Introduced by `r Citet(myBib, "Koenker_1978")`
-
-- Implemented in R in the `quantreg` package `r Citep(myBib, "Koenker_2020")`
-
-- Fits conditional quantiles, rather than the conditional mean (OLS)
-
-- Minimizes the sum of asymmetrically weighted residuals
-
-- More robust against outliers than OLS
-
-- Can handle skewed error distributions better than OLS
-
-- Standard errors are somwehat less straightforward to calculate
-
----
-
-background-image: url(compare_ols_qr.png)
-background-size: contain
-
----
-
 # Software used
 
 ### - R
@@ -467,6 +441,47 @@ background-size: 95%
 
 background-image: url(explain61.png)
 background-size: 95%
+
+---
+
+.center[# Can't this be done slightly easier?]
+
+--
+
+<h2 style='text-align: center;'> Enter quantile regression </h2>
+--
+
+<br>
+
+.center[![](https://media.giphy.com/media/C6JQPEUsZUyVq/giphy.gif?cid=ecf05e4789zzf79vp3p7rsg3iwt9l00a14v33u9zwmxfgt1a&rid=giphy.gif&ct=g)]
+
+---
+
+# Primer on Quantile Regression
+
+<br> 
+
+- Introduced by `r Citet(myBib, "Koenker_1978")`
+
+- Implemented in R in the `quantreg` package `r Citep(myBib, "Koenker_2020")`
+
+- Fits conditional quantiles, rather than the conditional mean (OLS)
+
+- Minimizes the sum of asymmetrically weighted residuals
+
+- More robust against outliers than OLS
+
+- Can handle skewed error distributions better than OLS
+
+- Standard errors are somwehat less straightforward to calculate
+
+---
+
+# 
+
+---
+background-image: url(compare_ols_qr.png)
+background-size: contain
 
 ---
 background-image: url(funny.jpg)
