@@ -124,3 +124,8 @@ pre{
 	width: 10vw;
 	height: 10vw;
 }
+
+.purple{
+  color: purple;
+  font-weight: bold;
+}

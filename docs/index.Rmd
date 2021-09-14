@@ -480,6 +480,10 @@ background-size: 95%
 ## - Thus, it leaves roughly 5 % of the data below the line (when the 5 % quantile is fitted)
 
 ---
+background-image: url(compare_ols_qr.png)
+background-size: contain
+
+---
 
 background-image: url(qr01.png)
 background-size: 95%
@@ -488,13 +492,13 @@ background-position: 50% 80%
 # Quantile regression in rainfall thresholds    
 
 ---
-
 background-image: url(qr03.png)
 background-size: 95%
 background-position: 50% 80%
 
----
+# The effect of dry days
 
+---
 background-image: url(histo0.png)
 background-size: 95%
 background-position: 50% 80%
@@ -502,7 +506,6 @@ background-position: 50% 80%
 # What is a rainfall event?
 
 ---
-
 background-image: url(histo1.png)
 background-size: 95%
 background-position: 50% 80%
@@ -510,6 +513,7 @@ background-position: 50% 80%
 # What is a rainfall event?
 
 ---
+
 background-image: url(histo2.png)
 background-size: 95%
 background-position: 50% 80%
@@ -517,14 +521,26 @@ background-position: 50% 80%
 # What is a rainfall event?
 
 ---
+
 background-image: url(histo3.png)
 background-size: 95%
 background-position: 50% 80%
 
-# What is a rainfall event?
+---
 
-background-image: url(compare_ols_qr.png)
-background-size: contain
+# How/Why to find the optimal number of dry days
+
+- How long does it take for the soil to dry?
+
+- detailed physical knowledge of landslide location necessary
+
+  - Evapotranspiration, Aspect, Slope, soil porosity, permeability, rainfall infiltration, ...
+
+- "The practical background of ID is that [...] it .purple[could be] that precipitation information is a good proxy for both meteorological trigger and hydro- logical cause. Although applied in many case studies, this approach suffers from many false positives as well as .purple[limited physical process understanding]" `r Citep(myBib, "Bogaard_2018")`
+
+- "[...] antecedent soil moisture conditions may provide critical support for the correct definition of the triggering conditions." `r Citep(myBib, "Lazarri_2020")`
+
+- "3-day recent rainfall and 15-day antecedent rainfall variables [12,20], are significantly improved by merely replacing antecedent rainfall with average soil saturation measured over the same interval `r Citep(myBib, "Mirus_2018")`
 
 ---
 background-image: url(funny.jpg)
