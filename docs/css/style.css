@@ -76,6 +76,10 @@ h2 {
   font-size: 50%;
 }
 
+.small2{
+  font-size: 85%;
+}
+
 
 .remark-slide-content {
   font-family: 'Quicksand';
@@ -128,4 +132,19 @@ pre{
 .purple{
   color: purple;
   font-weight: bold;
+}
+
+#funny{
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  width: 40vw;
+  border: 1px solid black;
+  box-shadow: 5px 10px;
+}
+
+.btc{
+  position: fixed;
+  top: 90%;
+  left: 40%;
 }

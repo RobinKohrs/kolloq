@@ -526,11 +526,13 @@ background-image: url(histo3.png)
 background-size: 95%
 background-position: 50% 80%
 
+# What is a rainfall event?
+
 ---
 
 # How/Why to find the optimal number of dry days
-
-- How long does it take for the soil to dry?
+.small2[
+- <span style='font-weight: bold; font-size: 160%'> <u> Question: </u> How long does it take for the soil to dry? </span>
 
 - detailed physical knowledge of landslide location necessary
 
@@ -538,27 +540,64 @@ background-position: 50% 80%
 
 - "The practical background of ID is that [...] it .purple[could be] that precipitation information is a good proxy for both meteorological trigger and hydro- logical cause. Although applied in many case studies, this approach suffers from many false positives as well as .purple[limited physical process understanding]" `r Citep(myBib, "Bogaard_2018")`
 
-- "[...] antecedent soil moisture conditions may provide critical support for the correct definition of the triggering conditions." `r Citep(myBib, "Lazarri_2020")`
+- "[...] antecedent soil moisture conditions may provide .purple[critical support] for the correct definition of the triggering conditions." `r Citep(myBib, "Lazarri_2020")`
 
-- "3-day recent rainfall and 15-day antecedent rainfall variables [12,20], are significantly improved by merely replacing antecedent rainfall with average soil saturation measured over the same interval `r Citep(myBib, "Mirus_2018")`
+- "3-day recent rainfall and 15-day antecedent rainfall variables [12,20], are .purple[significantly improved] by merely replacing antecedent rainfall with average .purple[soil saturation measured over the same interval] `r Citep(myBib, "Mirus_2018")`
+]
 
 ---
-background-image: url(funny.jpg)
-background-size: 300px 500px
-background-position: 70% 35%
 
-.pull-left[
-# What
-# is
-# the
-# problem?
+# 3-15 day 5 % non-exceedance antecedent thresholds
 
-]
+- 3 day precipitation prior to landslide (p3)
+
+- 15 day precipitation prior to p3 (p15)
+
+- Fit a 5 % non-exceedance probability threshold using quantile regression
+
+- No need for defining "rainfall events"
+
+- But where does the decision for the 3 and 15 days come from?
+
+- Look at `r Citep(myBib, map_chr(c("_2000", "_2006", "_2008"), ~paste0("Chleborad", .x)))`
+
+- Intuitive (mostly)
+
+---
+background-image: url(ant01.png)
+background-size: 95%
+background-position: 50% 80%
+
+# Global antecedent thresholds
+
+---
+background-image: url(ant01_redpoint.png)
+background-size: 95%
+background-position: 50% 80%
+
+# Why is the slope almost 0?
+
+---
+background-image: url(ant02.png)
+background-size: 90%
+background-position: 50% 90%
+---
+# Does this feel right?
 
 
-.pull-right[
- .lr[[source: deep-web](https://www.instagram.com/p/CTesubojZUA/)]
-]
+## "separate the storms that lead to shallow landsliding from those that do not" `r Citep(myBib, "Jakob_2003")`
+    
+- Unusual in other common binary classification problems
+
+- The model has no information whatsoever how rainfall events look like that (probably) did not cause landslides
+
+- Probability to the rescue: "When different outputs (landslide or no-landslide) can be obtained for the same input a probabilistic approach is preferable" `r Citep(myBib, "Berti_2012")`
+
+--
+
+<img id="funny" src="funny.jpg"></img>
+
+.btc[[source: deep-web](https://www.instagram.com/p/CTesubojZUA/)]
 
 ---
 # The real problem...
