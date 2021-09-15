@@ -19,12 +19,6 @@ output:
       countIncrementalSlides: false
     seal: false
 ---
-
-
-<div id="spinner"></div>
-
-
----
 class: title-slide, middle
 
 ```{r, load_refs, include=FALSE, cache=FALSE}

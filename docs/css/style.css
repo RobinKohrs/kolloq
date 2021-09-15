@@ -125,7 +125,7 @@ pre{
 	position: fixed;
 	top: 35%;
 	left: 39%;
-	width: 10vw;
+	width: 20vw;
 	height: 10vw;
 }
 
@@ -138,7 +138,7 @@ pre{
   position: fixed;
   top: 10%;
   left: 30%;
-  width: 40vw;
+  width: 20vw;
   border: 1px solid black;
   box-shadow: 5px 10px;
 }
