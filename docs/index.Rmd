@@ -594,8 +594,41 @@ background-position: 50% 90%
 .btc[[source: deep-web](https://www.instagram.com/p/CTesubojZUA/)]
 
 ---
-# The real problem...
+background-image: url(rp1.png)
+background-size: 90%
+background-position: 50% 70%
+
+# The "real" problem...
 ---
+
+background-image: url(rp2.png)
+background-size: 90%
+background-position: 50% 70%
+
+# The "real" problem...
+---
+
+background-image: url(rp3.png)
+background-size: 90%
+background-position: 50% 70%
+
+# The "real" problem...
+---
+
+background-image: url(rp4.png)
+background-size: 90%
+background-position: 50% 70%
+
+# The "real" problem...
+---
+
+background-image: url(rp5.png)
+background-size: 90%
+background-position: 50% 70%
+
+# The "real" problem...
+---
+
 
 ```{r, message=F, warning=F, excercise=T, eval=F}
 library(rainfallR)
