@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 
 .title-slide{
   color: #ee4b22;
@@ -147,4 +148,36 @@ pre{
   position: fixed;
   top: 90%;
   left: 40%;
+}
+
+.apup{
+  position:absolute;
+  top: 40%;
+  left: 30%;
+  color: black;
+  background-color: white;
+  box-shadow: 5px 10px;
+}
+
+.nd{
+  font-family: "Sigmar One";
+  position: absolute;
+  top: 13%;
+  left: 8%;
+  -webkit-animation:spin 4s linear infinite;
+      -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }

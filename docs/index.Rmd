@@ -629,26 +629,34 @@ background-position: 50% 70%
 # The "real" problem...
 ---
 
+.center[<h1 style='top: 40%; position: absolute;'> => Probabilistic Thresholds</h1> <h2 style='top: 45%; position: absolute;'> (rather than deterministic)</h2>]
 
-```{r, message=F, warning=F, excercise=T, eval=F}
-library(rainfallR)
-library(iffitoR)
-library(dplyr)
+---
 
-landsld %>% filter(year.int == 2016) %>% filter(date_info == "day") %>% slice(1:5) -> data
+background-image: url(prob1.png)
+background-size: contain
+--
+##.apup[How do we know if this is any good?]
 
-rain_data = rainfallR::get_rainfall_point_data(
-  data,
-  days_back = 5,
-  daily_thresh = 1.1,
-  n_dry = 2,
-  ncores = 2,
-  save = F,
-  path_rainfall = "data/"
-)
+---
 
-base::subset(rain_data, select = c("PIFF_ID", "precip", "days_before_event", "event")) %>% head(n=10)
-```
+background-image: url(prob2.png)
+background-size: contain
+
+.nd[New data]
+--
+
+---
+background-image: url(prob3.png)
+background-size: contain
+
+---
+background-image: url(prob4.png)
+background-size: contain
+
+---
+background-image: url(prob5.png)
+background-size: contain
 
 ---
 background-image: url(know1.svg)
