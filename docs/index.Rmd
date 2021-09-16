@@ -25,7 +25,7 @@ class: title-slide, middle
 library(RefManageR)
 BibOptions(check.entries = FALSE,
            bib.style = "authoryear",
-           style = "markdown",
+           style = "html",
            hyperlink = FALSE,
            dashed = TRUE)
 myBib <- ReadBib("./ref.bib", check = FALSE)
@@ -56,52 +56,33 @@ Supervisor:
 
 # Overview
 
-1. Some things about me
+1. The goal of the internship
 
-2. The objective of my internship
+2. The data
 
 3. What is a rainfall threshold?
 
-4. The dream data
+4. The thresholds
 
-5. The real data
+5. Conclusion
 
-6. The thesholds
-
-7. Conclusion
-
----
-
-# Quick introduction
-
--  My name is Robin Kohrs
-
---
-
-- I am from Hamburg, where I also mainly did my masters.
-
---
-
-- At some point I changed my masters from geography in Innsbruck to to geoinformatics in Jena
-
---
-
-- I really like (spatial) statistics, remote sensing, data-handling, and data visualization (although I'm no good in any of them)
- 
 ---
 
 # The internship
 
-- Started in December 2020 and was prolonged in April 2021 (when I also officially started the master thesis)
+- Started in December 2020 and was prolonged in April 2021 (when I also officially started the master's thesis)
 
 <br>
-- Embedded in the Proslide project
+- Embedded in the Prosli
+
+<br>
+- Combination of static and dynamic for the analysis and prediction of shallow landslides
 
 <br>
 - Develop rainfall thresholds for the Province of South Tyrol 
 
 <br>
-- Do a final presentation
+- I'll show some of the most interesting aspects from this process
 
 ---
 
@@ -276,7 +257,7 @@ background-size: 95%
 ]
 
 .pull-right[
-## <u>Period based thresholds</u>
+## <u>Antecedent thresholds</u>
 
 - p3 => precipitation 3 days prior to landslide
 
@@ -731,7 +712,20 @@ background-size: contain
 ---
 # References
 
+.bib[
 ```{r, results='asis', echo=F, warning=F, message=F}
-PrintBibliography(myBib)
+PrintBibliography(myBib, start=1, end=10)
 ```
+]
+ 
+---
 
+.bib[
+```{r, results='asis', echo=F, warning=F, message=F}
+PrintBibliography(myBib, start=11, end=14)
+```
+]
+
+---
+.center[<h1 style='position: absolute; top:40%; left: 38%'> Grazie Mille </h1>]
+---

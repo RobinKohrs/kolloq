@@ -181,3 +181,9 @@ pre{
         transform:rotate(360deg); 
     } 
 }
+
+.bib{
+  font-size: 12px;
+  color: darkblue;
+}
+
