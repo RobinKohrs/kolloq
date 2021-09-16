@@ -56,15 +56,20 @@ Supervisor:
 
 # Overview
 
-1. The goal of the internship
+1. Goal of the internship
 
 2. The data
 
-3. What is a rainfall threshold?
+3. Anatomy of a rainfall threshold 
 
-4. The thresholds
+4. Some developed thresholds
 
-5. Conclusion
+5. Conclusions
+
+--
+
+<br>
+.center[... much mussing]
 
 ---
 
@@ -72,17 +77,16 @@ Supervisor:
 
 - Started in December 2020 and was prolonged in April 2021 (when I also officially started the master's thesis)
 
-<br>
-- Embedded in the Prosli
+- Embedded in the Proslide Project
 
-<br>
 - Combination of static and dynamic for the analysis and prediction of shallow landslides
 
-<br>
-- Develop rainfall thresholds for the Province of South Tyrol 
+  - Subgoal: Develop rainfall thresholds for the Province of South Tyrol 
 
-<br>
-- I'll show some of the most interesting aspects from this process
+- I'll show some of the interesting aspects from this process
+
+![](collection.png)
+<span style="color: darkblue"> Source: IFFI database </span>
 
 ---
 
@@ -186,11 +190,15 @@ A threshold is: "the level or point at which you start to experience something, 
 - Inventario dei fenomeni franosi in Italia (IFFI) Database
 - Gravitational movemets of all types (no avalanches)
 - Many variables (including the date, material, extent, ...)
-- I received a manual extraction of the database:
+- We received a manual extraction of the database:
   * Ms Access Database
-  * Excel FIles
+  * Excel Files
   * Shapefiles
 
+
+.dist[
+![](slides02.png)
+]
 ---
 
 ```{r, out.width="100%", out.height="100%", echo=F}
@@ -208,10 +216,13 @@ library(tidyverse)
 mapview(`Selected Landslides`,col.regions="steelblue")
 ```
 
-
-
 ---
 
+```{r, out.width="100%", out.height="100%", echo=F}
+knitr::include_graphics("slides01.png")
+```
+
+---
 # More Data
 
 ### Station rainfall data
