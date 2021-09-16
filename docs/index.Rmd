@@ -575,6 +575,30 @@ background-position: 50% 80%
 background-image: url(ant02.png)
 background-size: 90%
 background-position: 50% 90%
+
+---
+
+# How to validate a threshold like this?
+
+## I decided that 5 % the data should stay below the threshold
+
+## So a good threshold will have 5 % of new, unseen, data below the threshold?
+
+## Generalization vs Precision...!!
+
+  + The smaller the scale is the better the incorporation of local characteristics. Yet, the lower its generalization capabilities
+  
+  + How can we maybe know out if it ok to use one threshold for entire South Tyrol?
+  
+  + Distance from false negatives to threshold in a (spatial) cross validation (not really... More a spatial partitioning) 
+
+---
+
+background-image: url(valdeter.png)
+background-size: contain
+
+<h1 style='display:inline;'>RMSE </h1> <h2 style='display:inline;'> (of false negatives) </h2>
+
 ---
 # Does this feel right?
 
@@ -659,6 +683,19 @@ background-image: url(prob5.png)
 background-size: contain
 
 ---
+
+# Results
+
+- We rarely know anything why a landslide really was triggered
+
+- We can't obtain the exact rainfall at the landslide location
+
+- Simple, deterministic, thresholds are easy to setup, but depend critically on (arbitratry decision) not coming from the data itself
+
+- Deterministic thresholds are very complicated to validate
+
+- Probabilistic thresholds seem to be more statistically sounds approach
+---
 background-image: url(know1.svg)
 background-size: contain
 
@@ -686,6 +723,10 @@ background-size: contain
 # Take away
 
 - With hindsight many things I would have done differently
+
+- Bayesian approach as in Berti et al. 2012
+
+- Think moe
 
 ---
 # References
