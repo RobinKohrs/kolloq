@@ -19,6 +19,8 @@ output:
       countIncrementalSlides: false
     seal: false
 ---
+background-image: url(untitled.png)
+
 class: title-slide, middle
 
 ```{r, load_refs, include=FALSE, cache=FALSE}
@@ -31,9 +33,9 @@ BibOptions(check.entries = FALSE,
 myBib <- ReadBib("./ref.bib", check = FALSE)
 ```
 
-## .center[Robin Kohrs]
+## .center.h2b[Robin Kohrs]
 
-# .center[Rainfall Thresholds for South Tyrol]
+<h1 class="titleheader">Rainfall Thresholds for South Tyrol</h1>
 
 --
 
@@ -62,6 +64,9 @@ Supervisor:
 
 3. Anatomy of a rainfall threshold 
 
+  + Deterministic thresholds
+  + Probabilistic thresholds
+
 4. Some developed thresholds
 
 5. Conclusions
@@ -69,7 +74,7 @@ Supervisor:
 --
 
 <br>
-.center[... much mussing]
+.center[... much missing]
 
 ---
 
@@ -248,7 +253,7 @@ background-size: 95%
 
 ---
 
-background-image: url(sm_antrainfall.png)
+background-image: url(sm.png)
 background-size: 95%
 
 ---
@@ -272,7 +277,7 @@ background-size: 95%
 
 - p3 => precipitation 3 days prior to landslide
 
-- p15 => precipitaiton 15 days prior to slide
+- p15 => precipitaiton 15 days prior to p3
 
 - Often times try to include some decay function or any other proxy for the water saturation of the soil
 ]
@@ -319,24 +324,23 @@ background-size: 95%
 knitr::include_graphics("vars.PNG")
 ```
 ]
-<h2 style='margin-top: 0;'> . . . </h2>
-
+<h2 style='margin-top: 0; margin-bottom: 0;'> . . . </h2>
 `r Citep(myBib, "Guzzetti_2007a")`
 
 ---
-# Methods for thresholding
+# Methods for calclating the threshold
 
 ## Quantile regression
-  - For *deterministic* threshold
+
+  - For *deterministic* thresholds
   - More in just a second
 
-<br>
 ***
 
 ## Binary classifiers
    - **Logistic regression**
       + Linear 
-      + Interpretable (yet not OLS)
+      + Interpretable (Yet not like OLS)
       
    - **Generalized Additive Model (GAM)**
       + Semi-parametric extension of GLMs
@@ -353,7 +357,7 @@ knitr::include_graphics("vars.PNG")
 
 ### - (QGis)
 
-### - [Coolers.co](https://coolors.co/), [Stackoverflow](https://stackoverflow.com/), ...
+### - Websites: <span style="font-size: 19px;">[Coolers.co](https://coolors.co/), [Stackoverflow](https://stackoverflow.com/), ... </span>
 
 
 ---
@@ -430,7 +434,7 @@ background-size: 95%
 
 ---
 
-.center[# Can't this be done slightly easier?]
+.center[# Can't this be done easier?]
 
 --
 
@@ -579,9 +583,15 @@ background-position: 50% 90%
 
 # Validation!
 
-- We need reference 
+## Is it good? Is it bad? Is it somewhere in the middle?
+
+- We need reference (as in real life)
 
 - Validation is (maybe) the most important research frontier for rainfall thresholds
+
+- But it is very complicated as local characteristics will always be different
+
+- It is even more different if one a priori "defines" the missclassification rate
 
 - For the moment being we only have false negatives (missed alarms)
 
@@ -631,7 +641,7 @@ background-size: contain
 
 <img id="funny" src="funny.jpg"></img>
 
-.btc[[source: deep-web](https://www.instagram.com/p/CTesubojZUA/)]
+.btc[[source: Instagram](https://www.instagram.com/p/CTesubojZUA/)]
 
 ---
 background-image: url(rp1.png)

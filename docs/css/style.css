@@ -4,7 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
 
 .title-slide{
-  color: #ee4b22;
+  color: black;
+  font-weight: bold;
   font-family: 'Quicksand'; 
   background-color: #d9dcde;
 }
@@ -29,6 +30,11 @@ h1 {
   color: #ee4b22;
 }
 
+h1.titleheader{
+  text-shadow: 5px 5px black;
+  text-align: center;
+}
+
 h2 {
   margin: 0;
   margin-top: 30px;
@@ -37,6 +43,14 @@ h2 {
   margin-bottom: 10px;
   color: steelblue;
   font-style: italic;
+}
+
+.h2b{
+  color: black;
+}
+
+h3{
+  margin-bottom: 1px;
 }
 
 .lr{
@@ -52,8 +66,7 @@ h2 {
 .ho{
   transition: transform .8s; /* Animation */
   width: 800px;
-  height: 400px;
-  margin: 0 0; 
+  height: 350px;
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
