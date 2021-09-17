@@ -478,6 +478,14 @@ background-position: 50% 80%
 # Quantile regression in rainfall thresholds    
 
 ---
+
+background-image: url(qr01_arrow.png)
+background-size: 95%
+background-position: 50% 80%
+
+# But wait...
+
+---
 background-image: url(qr03.png)
 background-size: 95%
 background-position: 50% 80%
@@ -567,6 +575,17 @@ background-position: 50% 80%
 background-image: url(ant02.png)
 background-size: 90%
 background-position: 50% 90%
+---
+
+# Validation!
+
+- We need reference 
+
+- Validation is (maybe) the most important research frontier for rainfall thresholds
+
+- For the moment being we only have false negatives (missed alarms)
+
+- We define (and accept) there to be 5 % of missed alarms
 
 ---
 
@@ -594,9 +613,14 @@ background-size: contain
 ---
 # Does this feel right?
 
+## What is again the main goal of a threshold?
+
+--
 
 ## "separate the storms that lead to shallow landsliding from those that do not" `r Citep(myBib, "Jakob_2003")`
-    
+
+--
+  
 - Unusual in other common binary classification problems
 
 - The model has no information whatsoever how rainfall events look like that (probably) did not cause landslides
@@ -621,34 +645,49 @@ background-image: url(rp2.png)
 background-size: 90%
 background-position: 50% 70%
 
-# The "real" problem...
+# Non landslide triggering events (NLE)
 ---
 
 background-image: url(rp3.png)
 background-size: 90%
 background-position: 50% 70%
 
-# The "real" problem...
+# Many False Alarms 
 ---
 
 background-image: url(rp4.png)
 background-size: 90%
 background-position: 50% 70%
 
-# The "real" problem...
+<h1 style="display: inline;"> Solution 1 </h1> <span style="display: inline;"> (see Peres et al. 2021) </span>
 ---
 
 background-image: url(rp5.png)
 background-size: 90%
 background-position: 50% 70%
 
-# The "real" problem...
+# False negatives...
 ---
 
-.center[<h1 style='top: 40%; position: absolute;'> => Probabilistic Thresholds</h1> <h2 style='top: 45%; position: absolute;'> (rather than deterministic)</h2>]
+.center[<h1 style='top: 20%; position: absolute;'> => Probabilistic Thresholds</h1> <h2 style='top: 25%; position: absolute;'> (rather than deterministic)</h2>]
 
+<span style="position:absolute; top: 50%;">![](https://media.giphy.com/media/jnULTbYwgDLYsoBbIS/giphy.gif?cid=ecf05e4702520pyvyf752du6coljjjcnuw4amwn0n7ywfdyj&rid=giphy.gif&ct=g)</span>
+<span style="position:absolute; top: 87%; left: 70%; color: darkblue"> <a src = "https://media.giphy.com/media/jnULTbYwgDLYsoBbIS/giphy.gif?cid=ecf05e4702520pyvyf752du6coljjjcnuw4amwn0n7ywfdyj&rid=giphy.gif&ct=g"> Source: Giphy </src> </span>
 ---
 
+# Anatomy of a probailistic thresholds
+
+- We want to predict the probability: $$Pr(landslide=1| \text{rainfall-value})$$
+
+- We need binary labeled data
+
+- Extract triggering and non-triggering rainfall events at landslide locations
+
+--
+
+<img width="700" height="300" src="nlplp.png">
+
+---
 background-image: url(prob1.png)
 background-size: contain
 --
@@ -682,11 +721,17 @@ background-size: contain
 
 - We can't obtain the exact rainfall at the landslide location
 
-- Simple, deterministic, thresholds are easy to setup, but depend critically on (arbitratry decision) not coming from the data itself
+- Simple, deterministic, thresholds are easy to setup, but depend critically on (arbitratry decision) not coming from the data itself 
 
-- Deterministic thresholds are very complicated to validate
+- Deterministic thresholds are complicated to validate (What is a good deterministic threshold after all?)
 
-- Probabilistic thresholds seem to be more statistically sounds approach
+- Probabilistic thresholds seem to be a more statistically sound approach
+
+- Performance of binary classifiers is (surprisingly?) good
+
+- Combination of susceptibility (spatial perspective) and rainfall thresholds (temporal perspective)
+
+- Future: Satellite data and probabilistic, Bayesian, rainfall thresholds
 ---
 background-image: url(know1.svg)
 background-size: contain
@@ -714,12 +759,13 @@ background-size: contain
 
 # Take away
 
-- With hindsight many things I would have done differently
+##- With hindsight many things I would have done differently
 
-- Bayesian approach as in Berti et al. 2012
+##- Still appealing: Bayesian approach as in Berti et al. 2012 in combination with landslide susceptibility
 
-- Think moe
+##- Do less, in more depth rather than more, shallow
 
+##- Needless to say, but: Do not implement this in any LEWS!
 ---
 # References
 
