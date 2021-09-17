@@ -710,8 +710,6 @@ background-size: contain
 
 .nd[New data]
 
-<div class="stop"></div>
-
 --
 
 ---
