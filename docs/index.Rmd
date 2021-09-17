@@ -746,21 +746,23 @@ background-size: contain
 background-image: url(know1.svg)
 background-size: contain
 
+# Lessons from this thesis
 ---
 background-image: url(know2.svg)
 background-size: contain
 
+# Lessons from this thesis
 ---
 
 background-image: url(know3.svg)
 background-size: contain
 
-# Status Quo
+# Lessons from this thesis
 ---
 background-image: url(know31.svg)
 background-size: contain
 
-# The goal
+# Lessons from this thesis
 ---
 background-image: url(know4.svg)
 background-size: contain
