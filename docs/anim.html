@@ -22,14 +22,13 @@ time.innerHtml("this");
 // stop the thing from rotating
 
 //get it
+data = document.querySelector(".nd");
+stp = document.querySelector(".stop");
 
-const thing = document.querySelector(".nd").onclick = hide;
-function hide{
-  thing.style.visibility="hide";
-}
+stp.onclick = function(){
+  data.style.visibility = "hidden";
 }
   
-
 
 </script>
 
