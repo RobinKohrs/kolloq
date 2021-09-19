@@ -163,7 +163,7 @@ A threshold is: "the level or point at which you start to experience something, 
 
 # Anatomy of a threshold:
 
-### Data
+### Data:
   + Rainfall/Soil moisture/... data
   + Landslide data
 
@@ -328,7 +328,7 @@ knitr::include_graphics("vars.PNG")
 `r Citep(myBib, "Guzzetti_2007a")`
 
 ---
-# Methods for calclating the threshold
+# Threshold model
 
 ## Quantile regression
 
@@ -339,7 +339,7 @@ knitr::include_graphics("vars.PNG")
 
 ## Binary classifiers
    - **Logistic regression**
-      + Linear 
+      + Linear (the logit of the estimated probability) 
       + Interpretable (Yet not like OLS)
       
    - **Generalized Additive Model (GAM)**
@@ -459,7 +459,7 @@ background-size: 95%
 
 - Minimizes the sum of asymmetrically weighted residuals
 
-- More robust against outliers than OLS
+- More robust against outliers in the response than OLS
 
 - Can handle skewed error distributions better than OLS
 
@@ -545,7 +545,7 @@ background-position: 50% 80%
 
 ---
 
-# 3-15 day 5 % non-exceedance antecedent thresholds
+## 3-15 day 5 % non-exceedance probability antecedent thresholds
 
 - 3 day precipitation prior to landslide (p3)
 
