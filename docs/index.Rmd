@@ -789,12 +789,11 @@ background-size: contain
 
 # Some links:
 
-## - Code:
-
+## Code & some data:
   - https://github.com/MaThRk
   - https://gitlab.inf.unibz.it/proslide
 
-## Data
+## Interactive data 
   - https://robinkohrs.shinyapps.io/iffi_data_shiny/
   
 ## Proslide
