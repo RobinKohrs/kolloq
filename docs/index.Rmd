@@ -169,8 +169,8 @@ A threshold is: "the level or point at which you start to experience something, 
 
 ### Some quantity to reach/exceed:
  + Event-Intenstiy (I), -Duration (D), -Cumulated rainfall (E) 
- + 3-day cumualted rainfall before slide (p3)
- + 15-day cumualted rainfall before slide (p15)
+ + 3-day cumulated rainfall before slide (p3)
+ + 15-day cumulated rainfall before slide (p15)
 
 ### A threshold-model to represent reality:
   - A value (1D threshold) 
@@ -200,9 +200,13 @@ A threshold is: "the level or point at which you start to experience something, 
   * Excel Files
   * Shapefiles
 
-
+--
 .dist[
 ![](slides02.png)
+]
+
+.dist2[
+![](global_dist.png)
 ]
 ---
 

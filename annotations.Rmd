@@ -1,0 +1,17 @@
+---
+title: Annotations
+output: html_document
+---
+  
+# Beginning:
+  
+- Dont be scared about the number of slides, I am scared and this is enough
+
+- Ill try to make it brief and the reason acually is that I do no know how to make proper transitions
+in this progam. So in Powerpoint this maybe would have been 40 or somehting
+
+
+# What is a rainfall threshold?
+
+- THe important take away is that it is a value (in 1D) or a line (in 2D) where the state of a system changes abruptly
+- There is  of literature about the existence of actual physical geomorphologic thresholds. WHich is actually super interesting, however not part of the thesis...
