@@ -389,7 +389,7 @@ knitr::include_app("https://robinkohrs.shinyapps.io/untitled/")
 
 --
 
-##2. How do we fit the line
+##2. How do we fit the threshold-line
 
 --
 
