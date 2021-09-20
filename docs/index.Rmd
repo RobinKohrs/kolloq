@@ -243,14 +243,15 @@ knitr::include_graphics("slides01.png")
 - WISKI Project
 - 66 Stations in South Tyrol
 - 65 record precipitation in 5 minute, 1 in 10 minute Intervals
-- Vairable length of recording
+- Variable length of recording
 
 
 ### Soil moisture data
 
-- Soilmoisture Content data
+- Soilmoisture Content (SMC) data
 - Based on Sentinel-1 and Sentinel-2
-- Statistically derived product with field measurements
+- Support Vector Regression
+- Available on GGE
 - `r Citet(myBib, "Attarzadeh_2018")`
 
 

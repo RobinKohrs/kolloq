@@ -15,3 +15,10 @@ in this progam. So in Powerpoint this maybe would have been 40 or somehting
 
 - THe important take away is that it is a value (in 1D) or a line (in 2D) where the state of a system changes abruptly
 - There is  of literature about the existence of actual physical geomorphologic thresholds. WHich is actually super interesting, however not part of the thesis...
+
+
+# Felix rainfall data
+
+- Object based, not pixel based
+
+- Support Vector Regression/ Support Vector machine for regression and not classifying problems
