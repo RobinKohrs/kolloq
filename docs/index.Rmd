@@ -205,6 +205,10 @@ A threshold is: "the level or point at which you start to experience something, 
 ![](slides02.png)
 ]
 
+.arr[
+![](arrow.svg)
+]
+
 .dist2[
 ![](global_dist.png)
 ]
