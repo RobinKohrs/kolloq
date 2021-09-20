@@ -2,6 +2,12 @@
 title: Annotations
 output: html_document
 ---
+
+# Before Start
+
+- Open Offenthaler et al and the exponential equation
+
+- Maybe open the plot which separates the 2D space into two areas
   
 # Beginning:
   

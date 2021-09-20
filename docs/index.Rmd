@@ -650,6 +650,8 @@ background-size: contain
 
 - The model has no information whatsoever how rainfall events look like that (probably) did not cause landslides
 
+- In addition, these "deterministic" models only ever produce one output for a given input. No uncertainties attached....
+
 - Probability to the rescue: "When different outputs (landslide or no-landslide) can be obtained for the same input a probabilistic approach is preferable" `r Citep(myBib, "Berti_2012")`
 
 --
@@ -738,6 +740,12 @@ background-size: contain
 ---
 background-image: url(prob5.png)
 background-size: contain
+
+---
+background-image: url(315_binary.png)
+background-size: contain
+
+# Probabilistic antecedent thresholds
 
 ---
 
