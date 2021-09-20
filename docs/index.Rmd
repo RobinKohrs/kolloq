@@ -749,9 +749,9 @@ background-size: contain
 
 - Performance of binary classifiers is (surprisingly?) good
 
-- Combination of susceptibility (spatial perspective) and rainfall thresholds (temporal perspective)
+- **Dream:** Combination of susceptibility (spatial perspective) and rainfall thresholds (temporal perspective) within a Bayesian statistical approach (using the susceptibility as prior probabilty)
 
-- Future: Satellite data and probabilistic, Bayesian, rainfall thresholds
+- Future: Satellite data and probabilistic, rainfall thresholds
 ---
 background-image: url(know1.svg)
 background-size: contain
@@ -783,11 +783,23 @@ background-size: contain
 
 ##- With hindsight many things I would have done differently
 
-##- Still appealing: Bayesian approach as in Berti et al. 2012 in combination with landslide susceptibility
-
 ##- Do less, in more depth rather than more, shallow
 
 ##- Needless to say, but: Do not implement this in any LEWS!
+---
+# Some links:
+
+## - Code:
+
+  - https://github.com/MaThRk
+  - https://gitlab.inf.unibz.it/proslide
+
+## Data
+  - https://robinkohrs.shinyapps.io/iffi_data_shiny/
+  
+## Proslide
+  - https://www.mountainresearch.at/proslide/
+  
 ---
 # References
 
