@@ -200,11 +200,12 @@ pre{
   color: darkblue;
 }
 
-.arr{
-  position: absolute;
-  top: 0%;
-  left: 30%;
-  width: 330px;
+.arr {
+    position: absolute;
+    top: 43%;
+    left: 44%;
+    width: 330px;
+    z-index: 1;
 }
 
 .dist{
