@@ -22,3 +22,13 @@ in this progam. So in Powerpoint this maybe would have been 40 or somehting
 - Object based, not pixel based
 
 - Support Vector Regression/ Support Vector machine for regression and not classifying problems
+
+# RMSE
+
+
+- All we are seeing here are rainfall events and landslide at the same time
+# Uncommon in binary classification problems
+
+- If you wanna predict if a person has diabetes
+
+- You do not look only at persons having diabetes, take their blood pressure and Age and fit a line

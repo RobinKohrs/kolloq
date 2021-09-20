@@ -629,6 +629,13 @@ background-size: contain
 <h1 style='display:inline;'>RMSE </h1> <h2 style='display:inline;'> (of false negatives) </h2>
 
 ---
+
+background-image: url(valdeter2.png)
+background-size: contain
+
+<h1 style='display:inline;'>RMSE </h1> <h2 style='display:inline;'> (of false negatives) </h2>
+
+---
 # Does this feel right?
 
 ## What is again the main goal of a threshold?
@@ -736,7 +743,7 @@ background-size: contain
 
 # Results
 
-- We rarely know anything why a landslide really was triggered
+- How to deal with missing physical information?
 
 - We can't obtain the exact rainfall at the landslide location
 
@@ -751,6 +758,7 @@ background-size: contain
 - **Dream:** Combination of susceptibility (spatial perspective) and rainfall thresholds (temporal perspective) within a Bayesian statistical approach (using the susceptibility as prior probabilty)
 
 - Future: Satellite data and probabilistic, rainfall thresholds
+
 ---
 background-image: url(know1.svg)
 background-size: contain
@@ -781,8 +789,13 @@ background-size: contain
 # Take away
 
 ##- With hindsight many things I would have done differently
+  + Code
+  + Organization
+  + Worry less about missing physical information and knowledge
 
-##- Do less, in more depth rather than more, shallow
+##- Do less, in more depth instead of more shallow
+
+## Occam's Razor (Simplicity over Complexity)
 
 ##- Needless to say, but: Do not implement this in any LEWS!
 ---
