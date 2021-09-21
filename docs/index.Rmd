@@ -412,11 +412,6 @@ background-size: 95%
 
 ---
 
-background-image: url(time.png)
-background-size: 95%
-
----
-
 background-image: url(explain2.png)
 background-size: 95%
 
