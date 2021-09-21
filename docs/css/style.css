@@ -157,18 +157,12 @@ pre{
   box-shadow: 5px 10px;
 }
 
-#station {
+#station{
     position: absolute;
     top: 4%;
     left: 60%;
     width: 300px;
     z-index: 0;
-}
-
-#station:hover{
-  transform: scale(3);
-  transform: translate(-2, 1)
-  
 }
 
 .btc{
