@@ -742,9 +742,9 @@ background-image: url(prob5.png)
 background-size: contain
 
 ---
-background-image: url("315_binary.png");
-background-size: 80%;
-background-position: 50% 101%;
+background-image: url(315_binary.png)
+background-size: 80%
+background-position: 50% 100%
 
 # Probabilistic antecedent thresholds
 
