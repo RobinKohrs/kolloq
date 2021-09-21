@@ -157,6 +157,10 @@ pre{
   box-shadow: 5px 10px;
 }
 
+#station{
+  position: absolute;
+}
+
 .btc{
   position: fixed;
   top: 85%;

@@ -86,9 +86,9 @@ Supervisor:
 
 - Combination of static and dynamic for the analysis and prediction of shallow landslides
 
-  - Subgoal: Develop rainfall thresholds for the Province of South Tyrol 
+  - Subgoal: Development of rainfall thresholds for the Province of South Tyrol 
 
-- I'll show some of the interesting aspects from this process
+- I'll show some of the interesting/challenging aspects from this process
 
 ![](collection.png)
 <span style="color: darkblue"> Source: IFFI database </span>
@@ -193,6 +193,7 @@ A threshold is: "the level or point at which you start to experience something, 
 ### Landslide Data
 
 - Inventario dei fenomeni franosi in Italia (IFFI) Database
+- ~ 10.500 entries
 - Gravitational movemets of all types (no avalanches)
 - Many variables (including the date, material, extent, ...)
 - We received a manual extraction of the database:
@@ -245,6 +246,8 @@ knitr::include_graphics("slides01.png")
 - 65 record precipitation in 5 minute, 1 in 10 minute Intervals
 - Variable length of recording
 
+
+<img id="station" src="gauge.png">
 
 ### Soil moisture data
 
