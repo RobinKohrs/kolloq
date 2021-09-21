@@ -788,12 +788,12 @@ background-size: contain
 background-image: url(know3.svg)
 background-size: contain
 
-# Lessons from this thesis
+# Before
 ---
 background-image: url(know31.svg)
 background-size: contain
 
-# Lessons from this thesis
+# After
 ---
 background-image: url(know4.svg)
 background-size: contain
