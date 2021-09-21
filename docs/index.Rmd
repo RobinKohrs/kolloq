@@ -545,7 +545,7 @@ background-position: 50% 80%
 
 # How/Why to find the optimal number of dry days
 .small2[
-- <span style='font-weight: bold; font-size: 160%'> <u> Question: </u> How long does it take for the soil to dry? </span>
+- <span style='font-weight: bold; font-size: 160%'> <u> Question: </u> How long does it take for the soil to dry? </span>]
 
 - detailed physical knowledge of landslide location necessary
 
@@ -613,7 +613,7 @@ background-position: 50% 90%
 
 ## Generalization vs Precision...!!
   
-  + What is the right scale for a thershold?
+  + What is the right scale for a threshold?
   
   + Validating the robustness
 
@@ -757,6 +757,7 @@ background-position: 50% 100%
 - Rainfall thresholds only make sense for rainfall-induced landslides. But can we really know which of these landslides are rainfall induced?
 ## Data quality
 - We can't obtain the exact rainfall at the landslide location
+- Temporal and spatial precision of the data of uttermost importance
 ## Deterministic tresholds
 - Easy to setup, but depend critically on (arbitrary decision) not coming from the data itself 
 - Complicated to validate (What is a good deterministic threshold after all?)
@@ -843,5 +844,7 @@ PrintBibliography(myBib, start=11, end=14)
 ]
 
 ---
-.center[<h1 style='position: absolute; top:40%; left: 38%'> Grazie Mille </h1>]
----
+background-image: url(circles.png)
+background-size: contain
+
+# Grazie Mille
