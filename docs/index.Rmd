@@ -364,9 +364,11 @@ knitr::include_graphics("vars.PNG")
 
   + ####and many of its extensions
 
-### - (QGis)
+### - GDAL/OGR
 
-### - Websites: <span style="font-size: 19px;">[Coolers.co](https://coolors.co/), [Stackoverflow](https://stackoverflow.com/), ... </span>
+### - QGis
+
+###  <span style="font-size: 19px;">[Coolers.co](https://coolors.co/), [Stackoverflow](https://stackoverflow.com/), ... </span>
 
 
 ---
@@ -406,6 +408,11 @@ knitr::include_app("https://robinkohrs.shinyapps.io/untitled/")
 ---
 
 background-image: url(explain1.png)
+background-size: 95%
+
+---
+
+background-image: url(time.png)
 background-size: 95%
 
 ---
@@ -750,19 +757,21 @@ background-position: 50% 100%
 
 ---
 
-# Results
-
-- How to deal with missing physical information?
-
+# Conclusions
+##    How to  handle missing physical information?
+- Rainfall thresholds only make sense for rainfall-induced landslides. But can we really know which of these landslides are rainfall induced?
+## Data quality
 - We can't obtain the exact rainfall at the landslide location
-
-- Simple, deterministic, thresholds are easy to setup, but depend critically on (arbitratry decision) not coming from the data itself 
-
-- Deterministic thresholds are complicated to validate (What is a good deterministic threshold after all?)
-
+## Deterministic tresholds
+- Easy to setup, but depend critically on (arbitrary decision) not coming from the data itself 
+- Complicated to validate (What is a good deterministic threshold after all?)
+## Probabilistic thresholds
 - Probabilistic thresholds seem to be a more statistically sound approach
-
 - Performance of binary classifiers is (surprisingly?) good
+
+---
+
+# Conclusions
 
 - **Dream:** Combination of susceptibility (spatial perspective) and rainfall thresholds (temporal perspective) within a Bayesian statistical approach (using the susceptibility as prior probabilty)
 
