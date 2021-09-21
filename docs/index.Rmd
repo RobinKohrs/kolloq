@@ -251,7 +251,7 @@ knitr::include_graphics("slides01.png")
 - Soilmoisture Content (SMC) data
 - Based on Sentinel-1 and Sentinel-2
 - Support Vector Regression
-- Available on GGE
+- Available on GEE
 - `r Citet(myBib, "Attarzadeh_2018")`
 
 
@@ -609,11 +609,11 @@ background-position: 50% 90%
 
 # How to validate a threshold like this?
 
-## I decided that 5 % the data should stay below the threshold
-
-## So a good threshold will have 5 % of new, unseen, data below the threshold?
-
 ## Generalization vs Precision...!!
+  
+  + What is the right scale for a thershold?
+  
+  + Validating the robustness
 
   + The smaller the scale is the better the incorporation of local characteristics. Yet, the lower its generalization capabilities
   
@@ -743,7 +743,7 @@ background-size: contain
 
 ---
 background-image: url(315_binary.png)
-background-size: contain
+background-size: 95%
 
 # Probabilistic antecedent thresholds
 
