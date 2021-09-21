@@ -223,6 +223,7 @@ knitr::include_graphics("mean_monthly_precip.png")
 
 ```{r map, echo=F, warning=F, message=F, out.width="100%", out.height="100%"}
 library(mapview)
+mapviewOptions(basemaps = c("CartoDB.DarkMatter","Esri.WorldShadedRelief", "OpenStreetMap.DE"))
 library(iffitoR)
 library(tidyverse)
 `Selected Landslides`=filt_landslide %>% select(PIFF_ID, first_level, second_level, date, material)
@@ -453,6 +454,7 @@ background-size: 95%
 --
 
 <h2 style='text-align: center;'> Enter quantile regression </h2>
+<h2 style='text-align: center;'> and Occam's razor </h2>
 --
 
 <br>
@@ -551,10 +553,7 @@ background-position: 50% 80%
 
 - "The practical background of ID is that [...] it .purple[could be] that precipitation information is a good proxy for both meteorological trigger and hydro- logical cause. Although applied in many case studies, this approach suffers from many false positives as well as .purple[limited physical process understanding]" `r Citep(myBib, "Bogaard_2018")`
 
-- "[...] antecedent soil moisture conditions may provide .purple[critical support] for the correct definition of the triggering conditions." `r Citep(myBib, "Lazarri_2020")`
-
-- "3-day recent rainfall and 15-day antecedent rainfall variables [12,20], are .purple[significantly improved] by merely replacing antecedent rainfall with average .purple[soil saturation measured over the same interval] `r Citep(myBib, "Mirus_2018")`
-]
+"[...] conceptually, .purple[rainfall does not match the primary cause for the occurrence of landslides] (Reichenbach et al. 1998). In fact, .purple[hydrology plays the most important role in landslide triggering], which is commonly related with the decrease in shear strength caused by the increase in pore water pressure on the potential rupture surface (Terlien 1998). `r Citep(myBib, "Zere_2014")`
 
 ---
 
@@ -622,7 +621,7 @@ background-position: 50% 90%
 
   + The smaller the scale is the better the incorporation of local characteristics. Yet, the lower its generalization capabilities
   
-  + How can we maybe know out if it ok to use one threshold for entire South Tyrol?
+  + How can we maybe find out if it ok to use one threshold for entire South Tyrol?
   
   + Distance from false negatives to threshold in a (spatial) cross validation (not really... More a spatial partitioning) 
 
