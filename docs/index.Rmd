@@ -549,11 +549,9 @@ background-position: 50% 80%
 
 - detailed physical knowledge of landslide location necessary
 
-  - Evapotranspiration, Aspect, Slope, soil porosity, permeability, rainfall infiltration, ...
+- Evapotranspiration, Aspect, Slope, soil porosity, permeability, rainfall infiltration, ...
 
-- "The practical background of ID is that [...] it .purple[could be] that precipitation information is a good proxy for both meteorological trigger and hydro- logical cause. Although applied in many case studies, this approach suffers from many false positives as well as .purple[limited physical process understanding]" `r Citep(myBib, "Bogaard_2018")`
-
-"[...] conceptually, .purple[rainfall does not match the primary cause for the occurrence of landslides] (Reichenbach et al. 1998). In fact, .purple[hydrology plays the most important role in landslide triggering], which is commonly related with the decrease in shear strength caused by the increase in pore water pressure on the potential rupture surface (Terlien 1998). `r Citep(myBib, "Zere_2014")`
+- "[...] conceptually, .purple[rainfall does not match the primary cause for the occurrence of landslides] (Reichenbach et al. 1998). In fact, .purple[hydrology plays the most important role in landslide triggering], which is commonly related with the decrease in shear strength caused by the increase in pore water pressure on the potential rupture surface (Terlien 1998). `r Citep(myBib, "Zere_2014")`
 
 ---
 
@@ -810,7 +808,7 @@ background-size: contain
 
 ##- Do less, in more depth instead of more shallow
 
-## Occam's Razor (Simplicity over Complexity)
+##- Occam's Razor (Simplicity over Complexity)
 
 ##- Needless to say, but: Do not implement this in any LEWS!
 ---
